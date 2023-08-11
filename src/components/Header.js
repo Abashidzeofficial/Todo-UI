@@ -21,10 +21,6 @@ function Header({ setInput, input, setTodo, todo }) {
     setInput(event.target.value);
   };
 
-  // const handleAdded = (event) => {
-  //   todo.map((input) => <div>{input.text}</div>);
-  // };
-
   return (
     <div className="app">
       <form className="header" onSubmit={handleSubmission}>
@@ -44,24 +40,19 @@ function Header({ setInput, input, setTodo, todo }) {
           </button>
         </div>
       </form>
-      <form className="result">
-        <div className="result-group">
-          <h1 className="input-texted">
-            {todo.map((input) => (
-              <div key={input.id}>{input.text}</div>
-            ))}
-          </h1>
-          <p className="input-time-texted"></p>
-        </div>
-        <div className="active-remove">
-          <div className="active-circle">
-            <img src={circle} className="active-circle" />
-          </div>
-          <div className="remove">
-            <img src={remove} className="remove" />
-          </div>
-        </div>
-      </form>
+      <h1 className="result">
+        {/* <h1 className="input-texted"> */}
+        {todo.map((input) => (
+          <p className="id-text" key={input.id}>
+            {input.text}
+            <div className="img">
+              <img src={circle} className="active-circle" />
+              <img src={remove} className="remove" />
+            </div>
+          </p>
+        ))}
+        {/* </h1> */}
+      </h1>
     </div>
   );
 }

@@ -59,24 +59,20 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: -22px;
+  gap: 15px;
+}
+
 .result {
   display: flex;
-  justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 15px;
-  padding-top: 30px;
-}
-.result-group {
-  display: flex;
   flex-direction: column;
-}
-.active-remove {
-  display: flex;
-  align-items: center;
-  width: 96px;
-  justify-content: space-evenly;
-}
-.remove,
-.active-circle {
-  cursor: pointer;
+  padding-left: 31px;
+  padding-right: 31px;
+  margin-top: 24px;
+  gap: 34px;
 }
