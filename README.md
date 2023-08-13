@@ -17,16 +17,6 @@ Welcome to the Todo UI project! This is a straightforward Todo List application 
 - Git: Version control system for tracking changes and collaborating with others.
 - GitHub Actions (Optional): Automate your workflow with GitHub Actions for seamless deployment.
 
-## Getting Started
-
-To get started with the Todo UI app locally, follow these steps:
-
-1. Clone the repository: `git clone https://github.com/YourUsername/Todo-UI.git`
-2. Navigate to the project directory: `cd Todo-UI`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
-
-Open your web browser and visit `http://localhost:3000` to see the app in action.
 
 ## Contribution
 
