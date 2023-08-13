@@ -26,3 +26,6 @@ If you'd like to contribute to the project, you're more than welcome! Here are a
 - Fork the repository, make changes, and submit pull requests for review.
 - Share your ideas and feedback to help improve the app's functionality and design.
 
+ ## Author
+- Giorgi abashidze
+
