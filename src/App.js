@@ -13,6 +13,7 @@ function App() {
   const [input, setInput] = useState("");
   const [item, setItem] = useState("");
   const [todo, setTodo] = useState([]);
+  const [removeTxt, setRemoveTxt] = useState(false);
 
   return (
     <div className="wrapper">
@@ -23,6 +24,8 @@ function App() {
           setInput={setInput}
           todo={todo}
           setTodo={setTodo}
+          removeTxt={removeTxt}
+          setRemoveTxt={setRemoveTxt}
         />
         {/* <Results
           todo={todo}

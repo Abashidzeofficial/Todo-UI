@@ -3,7 +3,7 @@ import vector from "../images/Vector.svg";
 import circle from "../images/circle.svg";
 import remove from "../images/trash.svg";
 
-function Header({ setInput, input, setTodo, todo }) {
+function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
   const handleSubmission = (event) => {
     event.preventDefault(); //brauzerze yoveli manipulaciis dros refreshi rom agvaridos
     setInput(""); //inputshi textis chaweris shemdeg inputi suftavdeba
@@ -19,6 +19,10 @@ function Header({ setInput, input, setTodo, todo }) {
 
   const handleChange = (event) => {
     setInput(event.target.value);
+  };
+  const handleRemoveClick = (id) => {
+    const updateTodo = todo.filter((item) => item.id !== id);
+    setTodo(updateTodo);
   };
 
   return (
@@ -41,17 +45,19 @@ function Header({ setInput, input, setTodo, todo }) {
         </div>
       </form>
       <h1 className="result">
-        {/* <h1 className="input-texted"> */}
-        {todo.map((input) => (
-          <p className="id-text" key={input.id}>
-            {input.text}
+        {todo.map((item) => (
+          <p className="id-text" key={item.id}>
+            {item.text}
             <div className="img">
               <img src={circle} className="active-circle" />
-              <img src={remove} className="remove" />
+              <img
+                src={remove}
+                className="remove"
+                onClick={() => handleRemoveClick(item.id)}
+              />
             </div>
           </p>
         ))}
-        {/* </h1> */}
       </h1>
     </div>
   );
