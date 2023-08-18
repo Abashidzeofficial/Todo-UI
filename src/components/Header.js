@@ -5,7 +5,7 @@ import remove from "../images/trash.svg";
 
 function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
   const handleSubmission = (event) => {
-    event.preventDefault(); //brauzerze yoveli manipulaciis dros refreshi rom agvaridos
+    event.preventDefault(); //brauzerze yoveli manipulaciis dros refreshi rom agvaridos tavidan
     setInput(""); //inputshi textis chaweris shemdeg inputi suftavdeba
     console.log(input);
 
