@@ -17,8 +17,8 @@ function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
     setTodo([...todo].concat(newTodo));
   };
 
-  const handleChange = (event) => {
-    setInput(event.target.value);
+  const handleChange = (e) => {
+    setInput(e.target.value);
   };
   const handleRemoveClick = (id) => {
     const updateTodo = todo.filter((item) => item.id !== id);
@@ -45,15 +45,15 @@ function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
         </div>
       </form>
       <h1 className="result">
-        {todo.map((item) => (
-          <p className="id-text" key={item.id}>
-            {item.text}
+        {todo.map((input) => (
+          <p className="id-text" key={input.id}>
+            {input.text}
             <div className="img">
               <img src={circle} className="active-circle" />
               <img
                 src={remove}
                 className="remove"
-                onClick={() => handleRemoveClick(item.id)}
+                onClick={() => handleRemoveClick(input.id)}
               />
             </div>
           </p>
