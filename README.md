@@ -1,8 +1,10 @@
 # Todo UI - A Simple Todo List App in React
 
+Welcome to the Todo UI project! This is a straightforward Todo List application built using React, designed to help you keep track of your tasks and stay organized.
+
+
 ![Thumbnail](https://github.com/Abashidzeofficial/Todo-UI/assets/114133338/3748eea9-bc83-412c-a23a-1ef12da761f3)
 
-Welcome to the Todo UI project! This is a straightforward Todo List application built using React, designed to help you keep track of your tasks and stay organized.
 
 ## Features
 
