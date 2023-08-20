@@ -3,7 +3,16 @@ import vector from "../images/Vector.svg";
 import circle from "../images/circle.svg";
 import remove from "../images/trash.svg";
 
-function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
+function Header({
+  setInput,
+  input,
+  setTodo,
+  todo,
+  removeTxt,
+  setRemoveTxt,
+  time,
+  setTime,
+}) {
   const handleSubmission = (event) => {
     event.preventDefault(); //brauzerze yoveli manipulaciis dros refreshi rom agvaridos tavidan
     setInput(""); //inputshi textis chaweris shemdeg inputi suftavdeba
@@ -15,6 +24,10 @@ function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
       completed: false,
     };
     setTodo([...todo].concat(newTodo));
+
+    const currentTime = new Date().toLocaleTimeString();
+    setTime(currentTime);
+    console.log(time);
   };
 
   const handleChange = (e) => {
@@ -47,7 +60,7 @@ function Header({ setInput, input, setTodo, todo, removeTxt, setRemoveTxt }) {
       <h1 className="result">
         {todo.map((input) => (
           <p className="id-text" key={input.id}>
-            {input.text}
+            {input.text} <h2 className="timeline"> Today {time}</h2>
             <div className="img">
               <img src={circle} className="active-circle" />
               <img

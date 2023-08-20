@@ -14,9 +14,19 @@ function App() {
   const [item, setItem] = useState("");
   const [todo, setTodo] = useState([]);
   const [removeTxt, setRemoveTxt] = useState(false);
+  const [time, setTime] = useState("");
+
+  // const handleTimeChange = () => {
+  //   const currentTime = new Date().toLocaleTimeString();
+  //   setTime(currentTime);
+  //   console.log(time);
+  // };
 
   return (
     <div className="wrapper">
+      {/* <p className="time" onClick={handleTimeChange}>
+        Today
+      </p> */}
       <img src={rectangle} className="logo" />
       <div className="container">
         <Header
@@ -26,6 +36,8 @@ function App() {
           setTodo={setTodo}
           removeTxt={removeTxt}
           setRemoveTxt={setRemoveTxt}
+          time={time}
+          setTime={setTime}
         />
         {/* <Results
           todo={todo}

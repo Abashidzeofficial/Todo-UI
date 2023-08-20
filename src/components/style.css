@@ -64,7 +64,7 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-top: -22px;
+  margin-top: -47px;
   gap: 15px;
 }
 
@@ -75,4 +75,18 @@ body {
   padding-right: 31px;
   margin-top: 24px;
   gap: 34px;
+}
+.timeline {
+  color: #888;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  gap: 15px;
+}
+.id-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
