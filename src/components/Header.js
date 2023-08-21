@@ -2,16 +2,17 @@ import React from "react";
 import vector from "../images/Vector.svg";
 import circle from "../images/circle.svg";
 import remove from "../images/trash.svg";
+import emptyCircle from "../images/empty_circle.svg";
 
 function Header({
   setInput,
   input,
   setTodo,
   todo,
-  removeTxt,
-  setRemoveTxt,
   time,
   setTime,
+  changeCircle,
+  setChangeCircle,
 }) {
   const handleSubmission = (event) => {
     event.preventDefault(); //brauzerze yoveli manipulaciis dros refreshi rom agvaridos tavidan
@@ -38,6 +39,11 @@ function Header({
     setTodo(updateTodo);
   };
 
+  const handleClick = () => {
+    setChangeCircle(!changeCircle ? { emptyCircle } : { circle });
+    console.log(changeCircle);
+  };
+
   return (
     <div className="app">
       <form className="header" onSubmit={handleSubmission}>
@@ -62,7 +68,11 @@ function Header({
           <p className="id-text" key={input.id}>
             {input.text} <h2 className="timeline"> Today {time}</h2>
             <div className="img">
-              <img src={circle} className="active-circle" />
+              <img
+                src={emptyCircle}
+                className="active-circle"
+                onClick={handleClick}
+              />
               <img
                 src={remove}
                 className="remove"

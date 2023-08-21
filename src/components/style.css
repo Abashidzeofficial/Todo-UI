@@ -90,3 +90,7 @@ body {
   flex-direction: column;
   gap: 4px;
 }
+.remove,
+.active-circle {
+  cursor: pointer;
+}
