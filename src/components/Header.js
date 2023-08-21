@@ -23,6 +23,7 @@ function Header({
       id: new Date().getTime(),
       text: input,
       completed: false,
+      isCircleFilled: false,
     };
     setTodo([...todo].concat(newTodo));
 
@@ -39,9 +40,16 @@ function Header({
     setTodo(updateTodo);
   };
 
-  const handleClick = () => {
-    setChangeCircle(!changeCircle ? { emptyCircle } : { circle });
-    console.log(changeCircle);
+  // const handleClick = () => {
+  //   setChangeCircle(changeCircle ? emptyCircle : circle);
+  //   console.log(changeCircle);
+  // };
+
+  const handleCircleClick = (id) => {
+    const updatedTodo = todo.map((item) =>
+      item.id === id ? { ...item, isCircleFilled: !item.isCircleFilled } : item
+    );
+    setTodo(updatedTodo);
   };
 
   return (
@@ -56,7 +64,12 @@ function Header({
               onChange={handleChange}
               value={input}
             ></input>
-            <img src={circle} className="circle-icon" />
+            <img
+              src={input.isCircleFilled ? circle : emptyCircle}
+              className="circle-icon"
+              alt="Circle"
+              onClick={() => handleCircleClick(input.id)}
+            />
           </div>
           <button className="submit-btn">
             <img src={vector} className="vector" />
@@ -69,9 +82,9 @@ function Header({
             {input.text} <h2 className="timeline"> Today {time}</h2>
             <div className="img">
               <img
-                src={emptyCircle}
+                src={input.isCircleFilled ? circle : emptyCircle}
                 className="active-circle"
-                onClick={handleClick}
+                onClick={() => handleCircleClick(input.id)}
               />
               <img
                 src={remove}

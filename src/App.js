@@ -15,7 +15,7 @@ function App() {
   const [todo, setTodo] = useState([]);
   const [removeTxt, setRemoveTxt] = useState(false);
   const [time, setTime] = useState("");
-  const [changeCircle, setChangeCircle] = useState(false);
+  const [changeCircle, setChangeCircle] = useState("");
 
   return (
     <div className="wrapper">
