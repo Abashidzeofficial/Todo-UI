@@ -40,11 +40,6 @@ function Header({
     setTodo(updateTodo);
   };
 
-  // const handleClick = () => {
-  //   setChangeCircle(changeCircle ? emptyCircle : circle);
-  //   console.log(changeCircle);
-  // };
-
   const handleCircleClick = (id) => {
     const updatedTodo = todo.map((item) =>
       item.id === id ? { ...item, isCircleFilled: !item.isCircleFilled } : item
@@ -100,3 +95,4 @@ function Header({
 }
 
 export default Header;
+// in 69 line disabled={!input} This means the button will be disabled when inputValue is empty and enabled when it has a value.
