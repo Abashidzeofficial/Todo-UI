@@ -71,7 +71,7 @@ function Header({
               onClick={() => handleCircleClick(input.id)}
             />
           </div>
-          <button className="submit-btn">
+          <button className="submit-btn" disabled={!input}>
             <img src={vector} className="vector" />
           </button>
         </div>
